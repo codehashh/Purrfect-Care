@@ -1,0 +1,112 @@
+body {
+    background-color: white;
+}
+
+
+
+#click-count{
+    font-family: Quicksand !important;
+    font-weight: bold !important;
+}
+
+
+#numbering{
+    display:flex;
+    gap:0px;
+}
+
+
+#van {
+    padding: 50px 300px;
+}
+
+#stt {
+    font-family: "Amatic SC";
+    font-size: 50px;
+    text-align: center;
+}
+
+#head-van {
+    text-align: center;
+    font-size: 25px;
+}
+
+.gvan, .mvan {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.gvan img, .mvan img {
+    width: 400px;
+    height: auto;
+}
+
+.gvan div, .mvan div {
+    flex: 1; 
+    font-size: 15px;
+    font-family: quicksand;
+    line-height: 1.5;
+}
+
+.mfeatures, .gfeatures {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap; 
+}
+
+.mfeatures div, .gfeatures div {
+    max-width: 150px; 
+    flex: 1; 
+}
+
+.mfeatures p, .gfeatures p {
+    margin: 0;
+    padding: 0;
+    white-space: normal;
+    word-wrap: break-word;
+    font-family: quicksand;
+    font-size: 12px;
+}
+
+#contact {
+    font-size: 15px !important;
+    text-align: left !important;
+    padding-left: 150px !important;
+    font-family: quicksand;
+    padding-bottom: 20px;
+}
+
+#contact a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+#contact a:hover {
+    text-decoration: underline !important;
+}
+
+#info {
+    font-size: 13px !important;
+}
+
+#bookbutton {
+    text-transform: uppercase;
+    background-color: #e4a0b7;
+    font-family: "Amatic SC";
+    font-size: 25px;
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+
+#bookbutton:hover{
+    background-color: #e18aaa;
+    cursor: pointer;
+}

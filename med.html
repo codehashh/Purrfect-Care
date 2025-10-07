@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Purrfect Care</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/med.css">
+    <link rel="icon" href="static/images/favicon.png">
+
+
+</head>
+
+<body>
+    <div id="tagline">
+        WHERE FURS AND PURRS MEET PERFECT CARE
+    </div>
+
+    <div id="header">
+        <section id="logo">
+            <img src="static/images/sqwbg.png" alt="purrfect care logo" height="100%">
+        </section>
+        <section id="buttonss">
+            <button title="Your Account"> <!--account-->
+                <img src="static/images/after-login-button.png" alt="Your Account" height="25px" width="auto">
+            </button>
+            <div id="numbering">
+            <button title="Shoping cart"> <!--cart-->
+                <img src="static/images/cart.png" alt="shop our product" height="25px" width="auto">
+            </button> <sup id="click-count">0</sup></div>
+            <button title="Logout" onclick="window.location.href='index.html'"> <!--logout-->
+                <img src="static/images/logout.png" alt="favorites" height="25px" width="auto">
+            </button>
+        </section>
+        <section>
+            <button id="abtbutton" onclick="window.location.href='main-after-login.html'">
+
+                About us
+            </button>
+        </section>
+    </div>
+
+    <div id="dropdowns" class="dd">
+
+        <button onclick="window.location.href='van.html'">van services</button>
+        <button onclick="window.location.href='med.html'">medicines</button>
+        <button onclick="window.location.href='smartcollar.html'"><sub>✧</sub>smart pet collar <sup>✧</sup></button>
+        <button onclick="window.location.href='onlinevet.html'">online vet consultation</button>
+        <button onclick="window.location.href='toys.html'">essentials</button>
+    </div>
+
+    <div class="med">
+        <div id="stt">
+            ENJOY QUICK DELIVERY, AND BEST PRICES
+        </div>
+        <br><br>
+        <div class="medphotos">
+            <h2>BUY NOW</h2>
+            <input type="text" id="searchBar" onkeyup="filterByPet()"
+                placeholder="Search by pet (dog, cat, fish, bird)">
+            <br><br>
+            <div class="category pet-category" data-pet="dog">
+                <h3>Dog Medicines</h3>
+                <button class="arrow left" onclick="scrollImages('dog', -200)">&#10094;</button>
+                <div class="image-container" id="dog">
+                    <div class="item">
+                        <img src="static/images/dogmed1.webp" alt="Dog Medicine">
+                        <p> <sup>₹</sup>350</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed2.webp" alt="Dog Shampoo">
+                        <p> <sup>₹</sup>250</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed3.webp" alt="Dog Toy">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed4.webp" alt="Dog Collar">
+                        <p> <sup>₹</sup>500</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed5.webp" alt="Dog Food">
+                        <p> <sup>₹</sup>700</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed6.webp" alt="Dog Food">
+                        <p> <sup>₹</sup>700</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed7.webp" alt="Dog Food">
+                        <p> <sup>₹</sup>700</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed8.webp" alt="Dog Food">
+                        <p> <sup>₹</sup>700</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="scrollImages('dog', 200)">&#10095;</button>
+            </div>
+
+            <br>
+
+            <div class="category pet-category" data-pet="cat">
+                <h3>Cat Medicines</h3>
+                <button class="arrow left" onclick="scrollImages('cat', -200)">&#10094;</button>
+                <div class="image-container" id="cat">
+                    <div class="item">
+                        <img src="static/images/catmed1.webp" alt="Cat Medicine">
+                        <p> <sup>₹</sup>300</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed2.webp" alt="Cat Shampoo">
+                        <p> <sup>₹</sup>220</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed3.webp" alt="Cat Toy">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed4.webp" alt="Cat Toy">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed5.webp" alt="Cat Toy">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed6.webp" alt="Cat Toy">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed7.webp" alt="Cat Toy">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed8.webp" alt="Cat Toy">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="scrollImages('cat', 200)">&#10095;</button>
+            </div>
+
+            <br>
+
+            <div class="category pet-category" data-pet="fish">
+                <h3>Fish Medicines</h3>
+                <button class="arrow left" onclick="scrollImages('fish', -200)">&#10094;</button>
+                <div class="image-container" id="fish">
+                    <div class="item">
+                        <img src="static/images/fishmed1.webp" alt="Fish Medicine">
+                        <p> <sup>₹</sup>200</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed2.webp" alt="Fish Food">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed3.webp" alt="Fish Food">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed4.webp" alt="Fish Food">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed5.webp" alt="Fish Food">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed6.webp" alt="Fish Food">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed7.webp" alt="Fish Food">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed8.webp" alt="Fish Food">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="scrollImages('fish', 200)">&#10095;</button>
+            </div>
+
+            <br>
+
+            <div class="category pet-category" data-pet="bird">
+                <h3>Bird Medicines</h3>
+                <button class="arrow left" onclick="scrollImages('bird', -200)">&#10094;</button>
+                <div class="image-container" id="bird">
+                    <div class="item">
+                        <img src="static/images/birdmed1.webp" alt="Bird Medicine">
+                        <p> <sup>₹</sup>250</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/birdmed2.webp" alt="Bird Food">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/birdmed3.webp" alt="Bird Food">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+
+                    <div class="item">
+                        <img src="static/images/birdmed5.webp" alt="Bird Food">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/birdmed6.webp" alt="Bird Food">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/birdmed7.webp" alt="Bird Food">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/birdmed8.webp" alt="Bird Food">
+                        <p> <sup>₹</sup>180</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="scrollImages('bird', 200)">&#10095;</button>
+            </div>
+
+        </div>
+
+        <script>
+            function scrollImages(category, scrollAmount) {
+                let container = document.getElementById(category);
+                container.scrollLeft += scrollAmount;
+            }
+
+            function filterByPet() {
+                let input = document.getElementById("searchBar").value.toLowerCase();
+                let categories = document.querySelectorAll(".pet-category");
+
+                categories.forEach(category => {
+                    let petType = category.getAttribute("data-pet").toLowerCase();
+                    if (petType.includes(input) || input === "") {
+                        category.style.display = "block";  // Show category
+                    } else {
+                        category.style.display = "none";   // Hide category
+                    }
+                });
+            }
+
+        </script>
+    </div>
+    <br><br>
+    <section id="contact">
+        <p>
+            <b>Further information</b>
+            <hr width="15%">
+        </p>
+        <p id="info">
+            <br>
+
+            <a href="">Terms & Conditions </a><br>
+            <a href="">Code of Conduct </a><br><br>
+            Contact Us <br>
+            YASH BANSAL (CEO) <br>
+            +91 88002 25447
+        </p>
+
+
+    </section>
+
+
+
+
+
+    <!--CODE FOR ADD TO CART NUMBERING-->
+
+    <script>
+        // Initialize count from localStorage or 0
+        let count = parseInt(localStorage.getItem('clickCount')) || 0;
+    
+        // Display count on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('click-count').innerHTML = count;
+    
+            // Attach event listeners to all add-to-cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    count++;
+                    localStorage.setItem('clickCount', count);
+                    document.getElementById('click-count').innerHTML = count;
+                });
+            });
+        });
+    </script>
+    
+
+
+
+
+
+</body>
+
+</html>

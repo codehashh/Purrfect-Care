@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Purrfect Care</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/onlinevet.css">
+    <link rel="icon" href="static/images/favicon.png">
+
+
+</head>
+
+<body>
+    <div id="tagline">
+        WHERE FURS AND PURRS MEET PERFECT CARE
+    </div>
+
+    <div id="header">
+        <section id="logo">
+            <img src="static/images/sqwbg.png" alt="purrfect care logo" height="100%">
+        </section>
+        <section id="buttonss">
+            <button title="Your Account"> <!--account-->
+                <img src="static/images/after-login-button.png" alt="Your Account" height="25px" width="auto">
+            </button>
+            <div id="numbering">
+            <button title="Shoping cart"> <!--cart-->
+                <img src="static/images/cart.png" alt="shop our product" height="25px" width="auto">
+            </button><sup id="click-count">0</sup></div>
+            <button title="Logout" onclick="window.location.href='index.html'"> <!--logout-->
+                <img src="static/images/logout.png" alt="favorites" height="25px" width="auto">
+            </button>
+        </section>
+        <section>
+            <button id="abtbutton" onclick="window.location.href='main-after-login.html'">
+
+                About us
+            </button>
+        </section>
+    </div>
+
+    <div id="dropdowns"  class="dd">
+
+        <button onclick="window.location.href='van.html'">van services</button>
+        <button onclick="window.location.href='med.html'">medicines</button>
+        <button onclick="window.location.href='smartcollar.html'"><sub>✧</sub>smart pet collar <sup>✧</sup></button>
+        <button onclick="window.location.href='onlinevet.html'">online vet consultation</button>
+        <button onclick="window.location.href='toys.html'">essentials</button>
+    </div>
+
+    <div class="onlinevet">
+        <section class="options">
+            <img src="" alt="">
+            <img src="" alt="">
+        </section>
+
+        <section class="healthconc">
+            <p>Consult top doctors for any health concerns</p>
+            <br><br>
+            <div class="dis">
+                <div>
+                    <img src="static/images/d1.png" alt="" height="120px" width="auto">
+                </div>
+                <div>
+                    <img src="static/images/d2.png" alt="" height="120px" width="auto">
+                </div>
+                <div>
+                    <img src="static/images/d3.png" alt="" height="120px" width="auto">
+                </div>
+                <div>
+                    <img src="static/images/d4.png" alt="" height="120px" width="auto">
+                </div>
+            </div>
+        </section>
+        <br>
+        <hr>
+        <br>
+        <div class="search-doc">
+            <section class="search-section">
+                <h1>Find the Best Doctors</h1>
+                <input type="text" id="searchBar" placeholder="Search doctors by name or specialty..."
+                    onkeyup="search()">
+            </section>
+
+            <section class="doctors">
+                <div class="doctor-list">
+                    <div class="doctor-card">
+                        <img src="static/images/fd1.avif" alt="Doctor">
+                        <h3>Dr. Ananya Sharma</h3>
+                        <p>Small Animal Veterinarian | 8 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/md1.jpg" alt="Doctor">
+                        <h3>Dr. Raj Mehta</h3>
+                        <p>Exotic Animal Specialist | 10 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/fd2.jpg" alt="Doctor">
+                        <h3>Dr. Priya Verma</h3>
+                        <p>Equine Veterinarian | 12 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/md2.jpg" alt="Doctor">
+                        <h3>Dr. Kunal Singh</h3>
+                        <p>Wildlife Veterinarian | 7 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/fd3.jpg" alt="Doctor">
+                        <h3>Dr. Simran Kapoor</h3>
+                        <p>Feline Specialist | 9 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/md3.webp" alt="Doctor">
+                        <h3>Dr. Arjun Iyer</h3>
+                        <p>Farm Animal Veterinarian | 14 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/fd4.jpg" alt="Doctor">
+                        <h3>Dr. Neha Nair</h3>
+                        <p>Avian Veterinarian | 11 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/md4.jpg" alt="Doctor">
+                        <h3>Dr. Harsh Patel</h3>
+                        <p>Veterinary Dermatologist | 10 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                    <div class="doctor-card">
+                        <img src="static/images/fd5.jpg" alt="Doctor">
+                        <h3>Dr. Isha Bose</h3>
+                        <p>Emergency & Critical Care Vet | 6 Years Experience</p>
+                        <button>Book Appointment</button>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+        <script>
+            function search() {
+                let input = document.getElementById("searchBar").value.toLowerCase();
+                let doctors = document.querySelectorAll(".doctor-card");
+
+                doctors.forEach(doctor => {
+                    let name = doctor.querySelector("h3").textContent.toLowerCase();
+                    let specialization = doctor.querySelector("p").textContent.toLowerCase();
+                    if (name.includes(input) || specialization.includes(input)) {
+                        doctor.style.display = "block";
+                    } else {
+                        doctor.style.display = "none";
+                    }
+                });
+            }
+        </script>
+        <hr>
+        <br><br>
+        <div class="appromo">
+            <img src="" alt="" id="productimg">
+            <p>Monitor your pet's health on our app using our <br> smart pet collar</p>
+            <button onclick="window.location.href='smartcollar.html'" id="buybutton">buy smart pet collar now</button>
+        </div>
+    </div>
+    <br><br><br>
+    <section id="contact">
+        <p>
+            <b>Further information</b>
+            <hr width="15%">
+        </p>
+        <p id="info">
+            <br>
+
+            <a href="">Terms & Conditions </a><br>
+            <a href="">Code of Conduct </a><br><br>
+            Contact Us <br>
+            YASH BANSAL (CEO) <br>
+            +91 88002 25447
+        </p>
+
+
+    </section>
+
+
+    
+
+
+
+
+    <!--CODE FOR ADD TO CART NUMBERING-->
+
+    <script>
+        // Initialize count from localStorage or 0
+        let count = parseInt(localStorage.getItem('clickCount')) || 0;
+    
+        // Display count on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('click-count').innerHTML = count;
+    
+            // Attach event listeners to all add-to-cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    count++;
+                    localStorage.setItem('clickCount', count);
+                    document.getElementById('click-count').innerHTML = count;
+                });
+            });
+        });
+    </script>
+    
+
+
+
+
+
+
+
+</body>
+
+</html>

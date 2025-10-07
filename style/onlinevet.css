@@ -1,0 +1,188 @@
+body {
+    font-family: quicksand;
+
+}
+
+
+#click-count{
+    font-family: Quicksand !important;
+    font-weight: bold !important;
+}
+
+
+#numbering{
+    display:flex;
+    gap:0px;
+}
+
+
+.onlinevet {
+    padding: 50px 200px;
+}
+
+.healthconc p {
+    font-family: quicksand;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+    
+}
+
+
+.dis {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    gap: 20px; 
+    max-width: 700px;
+    margin: 0 auto; 
+}
+
+.dis div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 150px;
+    max-width: 150px; 
+}
+
+.dis img {
+    width: 100px;
+    height: auto;
+}
+
+.dis p {
+    margin: 5px 0 0;
+    font-family: quicksand;
+    font-size: 14px;
+}
+
+.search-section {
+    margin: 50px 0;
+}
+
+.search-section h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#searchBar {
+    width: 60%;
+    max-width: 500px;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Doctors Section */
+.doctors {
+    margin: 50px 0;
+}
+
+.doctor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.doctor-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 220px;
+}
+
+.doctor-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.doctor-card h3 {
+    margin: 10px 0;
+}
+
+.doctor-card p {
+    font-size: 14px;
+    color: gray;
+}
+
+.doctor-card button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.doctor-card button:hover {
+    background-color: #555;
+}
+
+.appromo {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.appromo p {
+    font-family: quicksand;
+    font-size: 40px;
+    font-weight: normal;
+    text-align: center;
+}
+
+#buybutton {
+    font-family: "Amatic SC";
+    font-size: 25px;
+    background-color: #e4a0b7;
+    border-radius: 10px;
+    padding: 2px 5px;
+    align-items: center;
+}
+
+#buybutton:hover {
+    background-color: #e18aaa;
+    cursor: pointer;
+}
+
+#contact {
+    font-size: 15px !important;
+    text-align: left !important;
+    padding-left: 150px !important;
+    font-family: quicksand;
+    padding-bottom: 20px;
+    background-color: white;
+    width: 100%
+}
+
+#contact a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+#contact a:hover {
+    text-decoration: underline !important;
+}
+
+#info {
+    font-size: 13px !important;
+}

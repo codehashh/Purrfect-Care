@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Purrfect Care</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/toys.css">
+    <link rel="icon" href="static/images/favicon.png">
+
+</head>
+
+<body>
+    <div id="tagline">
+        WHERE FURS AND PURRS MEET PERFECT CARE
+    </div>
+
+    <div id="header">
+        <section id="logo">
+            <img src="static/images/sqwbg.png" alt="purrfect care logo" height="100%">
+        </section>
+        <section id="buttonss">
+            <button title="Your Account"> <!--account-->
+                <img src="static/images/after-login-button.png" alt="Your Account" height="25px" width="auto">
+            </button>
+            <div id="numbering">
+                <button title="Shoping cart"> <!--cart-->
+                    <img src="static/images/cart.png" alt="shop our product" height="25px" width="auto">
+                </button> <sup id="click-count">0</sup>
+            </div>
+            <button title="Logout" onclick="window.location.href='index.html'"> <!--logout-->
+                <img src="static/images/logout.png" alt="favorites" height="25px" width="auto">
+            </button>
+        </section>
+        <section>
+            <button id="abtbutton" onclick="window.location.href='main-after-login.html'">
+
+                About us
+            </button>
+        </section>
+    </div>
+
+    <div id="dropdowns" class="dd">
+
+        <button onclick="window.location.href='van.html'">van services</button>
+        <button onclick="window.location.href='med.html'">medicines</button>
+        <button onclick="window.location.href='smartcollar.html'"><sub>✧</sub>smart pet collar <sup>✧</sup></button>
+        <button onclick="window.location.href='onlinevet.html'">online vet consultation</button>
+        <button onclick="window.location.href='toys.html'">essentials</button>
+    </div>
+
+
+    <div class="ess-prod">
+
+        <h1> Buy pet Essentials now</h1>
+        <input type="text" id="searchBar" placeholder="Search for an item (e.g., Bowl, Toy, Litter, etc.)">
+
+        <div class="gallery-container" id="gallery">
+
+        </div>
+        <br><br>
+
+        <script>
+            const essentials =
+                [
+                    { name: "Food Bowl", category: "dog", price: "499", img: "static/images/dogfb1.webp" },
+                    { name: "Cat Tree", category: "cat", price: "3,499", img: "static/images/catt1.webp" },
+                    { name: "Food Bowl", category: "dog", price: "679", img: "static/images/dogfb2.webp" },
+                    { name: "Leash", category: "dog", price: "899", img: "static/images/dogl1.webp" },
+                    { name: "Dog Bed", category: "dog", price: "2,499", img: "static/images/dogh1.webp" },
+                    { name: "Litter Box", category: "cat", price: "799", img: "static/images/catlb1.webp" },
+                    { name: "Scratching Post", category: "cat", price: "1,199", img: "static/images/catsp1.webp" },
+                    { name: "Rabbit Hutch", category: "small pets", price: "4,299", img: "static/images/rabh.webp" },
+                    { name: "Scratching Post", category: "cat", price: "1,199", img: "static/images/catsp2.webp" },
+                    { name: "Cat Tree", category: "cat", price: "3,499", img: "static/images/catt3.webp" },
+                    { name: "Leash", category: "dog", price: "879", img: "static/images/dogl2.webp" },
+                    { name: "Cat Tree", category: "cat", price: "3,499", img: "static/images/catt2.webp" },
+                    { name: "Fish Tank", category: "fish", price: "4,999", img: "static/images/fisht.webp" },
+                    { name: "Water Filter", category: "fish", price: "1,499", img: "static/images/fishwp.webp" },
+                    { name: "Bird Cage", category: "bird", price: "2,199", img: "static/images/bc.webp" },
+                    { name: "Litter Box", category: "cat", price: "799", img: "static/images/catlb3.webp" },
+                    { name: "Food Bowl", category: "dog", price: "239", img: "static/images/dogfb3.webp" },
+                    { name: "Scratching Post", category: "cat", price: "1,199", img: "static/images/catsp3.webp" },
+                    { name: "Cat Tree", category: "cat", price: "3,499", img: "static/images/catt3.webp" },
+                    { name: "Bird Feeder", category: "bird", price: "799", img: "static/images/fdr.webp" },
+                    { name: "Leash", category: "dog", price: "1299", img: "static/images/dogl1.webp" },
+                    { name: "Perch", category: "bird", price: "699", img: "static/images/bp.webp" },
+                    { name: "Litter Box", category: "cat", price: "799", img: "static/images/catlb2.webp" }
+                ]
+
+
+
+            // Initialize count from localStorage or set to 0
+            let count = parseInt(localStorage.getItem('clickCount')) || 0;
+
+            // Function to update cart count
+            function updateCartCount() {
+                count++;
+                localStorage.setItem('clickCount', count);
+                document.getElementById('click-count').innerHTML = count;
+            }
+
+            function loadGallery() {
+                const gallery = document.getElementById("gallery");
+
+                essentials.forEach(item => {
+                    const div = document.createElement("div");
+                    div.classList.add("gallery-item");
+                    div.setAttribute("data-category", item.category);
+                    div.setAttribute("data-name", item.name.toLowerCase());
+
+                    div.innerHTML = `
+                <img src="${item.img}" alt="${item.name}">
+                <div class="price-buy">
+                    <span class="price"> <sup>₹</sup>${item.price}</span>
+                    <button class="add-to-cart">Add to cart</button>
+                </div>
+            `;
+
+                    gallery.appendChild(div);
+
+                    // Add event listener for the add-to-cart button
+                    div.querySelector('.add-to-cart').addEventListener('click', updateCartCount);
+                });
+            }
+
+            function searchItems() {
+                const searchValue = document.getElementById("searchBar").value.toLowerCase();
+                const items = document.querySelectorAll(".gallery-item");
+
+                items.forEach(item => {
+                    const name = item.getAttribute("data-name");
+                    const category = item.getAttribute("data-category");
+
+                    if (name.includes(searchValue) || category.includes(searchValue)) {
+                        item.classList.remove("hidden");
+                    } else {
+                        item.classList.add("hidden");
+                    }
+                });
+            }
+
+            // Ensure the counter is displayed on page load
+            window.onload = function () {
+                document.getElementById('click-count').innerHTML = count;
+                loadGallery();
+                document.getElementById("searchBar").addEventListener("input", searchItems);
+            };
+        </script>
+
+
+    </div>
+    <br><br><br><br><br>
+    <section id="contact">
+        <p>
+            <b>Further information</b>
+            <hr width="15%">
+        </p>
+        <p id="info">
+            <br>
+
+            <a href="">Terms & Conditions </a><br>
+            <a href="">Code of Conduct </a><br><br>
+            Contact Us <br>
+            YASH BANSAL (CEO) <br>
+            +91 88002 25447
+        </p>
+
+
+    </section>
+
+
+
+
+
+
+
+
+
+    <!--CODE FOR ADD TO CART NUMBERING-->
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+body {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffe7f2;
+
+}
+
+
+#click-count{
+    font-family: Quicksand !important;
+    font-weight: bold !important;
+}
+
+
+#numbering{
+    display:flex;
+    gap:0px;
+}
+
+
+.dd{
+    border-bottom: none !important;
+}
+
+#SPCstt {
+    font-family: "Amatic SC";
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+#SPCFcards {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 70vh;
+    margin: 0;
+}
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+    padding: 20px;
+}
+
+.card {
+    width: 30%;
+    height: 300px;
+    background: white;
+    padding: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: filter 0.3s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s;
+}
+
+.card.blur-left,
+.card.blur-right {
+    filter: blur(6px);
+    opacity: 0.5;
+    transform: scale(0.9);
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    cursor: pointer;
+    font-size: 35px;
+    color: white;
+    z-index: 10;
+    transition: background 0.3s, color 0.3s;
+    padding: 10px 15px;
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+}
+
+.arrow:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.left {
+    left: 10px;
+}
+
+.right {
+    right: 10px;
+}
+
+.panel {
+    background-color: transparent; /* remove white bg from parent */
+    padding: 25px 50px;
+    margin-top: 80px;
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.pricing-plan {
+    background-color: #424141; /* grey card */
+    color: white;
+    border-radius: 3px;
+    padding: 25px 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    min-width: 500px;
+}
+
+.pricing-header {
+    color: white;
+    font-weight: 600;
+    font-family: quicksand;
+    letter-spacing: 1px;
+}
+
+.pricing-features {
+    list-style-type: none;
+    margin: 15px 0 25px;
+    padding: 0;
+}
+
+.pricing-features-item {
+    font-family: quicksand;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 12px;
+    line-height: 1.5;
+    padding: 15px 0px;
+    border-top: 1px solid #777;
+    text-transform: uppercase;
+}
+
+.pricing-features-item:last-child {
+    border-bottom: 1px solid #777;
+}
+
+.pricing-price {
+    color: #f9caca;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: quicksand;
+}
+
+.pricing-but {
+    font-family: quicksand;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #e4a0b7;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: 1px solid #e4a0b7;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pricing-but:hover {
+    background-color: #e18aaa;
+    color: white;
+}
+
+/* Layout for larger screens */
+@media (min-width: 900px) {
+    .panel {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .pricing-plan {
+        width: 45%;
+    }
+}
+
+
+.remark p {
+    color: black;
+    font-family: quicksand;
+    font-size: 15px;
+}
+
+
+
+
+
+
+.flashcard-container {
+    display: flex;
+    gap: 20px;
+}
+
+.flashcard {
+    background-color: #ddd;
+    color: white;
+    padding: 30px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+
+
+
+
+
+
+#contact {
+    font-size: 15px !important;
+    text-align: left !important;
+    padding-left: 150px !important;
+    font-family: quicksand;
+    padding-bottom: 20px;
+    background-color: white;
+    width: 100%
+}
+
+#contact a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+#contact a:hover {
+    text-decoration: underline !important;
+}
+
+#info {
+    font-size: 13px !important;
+}

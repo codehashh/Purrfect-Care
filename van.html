@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Purrfect Care</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/van.css">
+    <link rel="icon" href="static/images/favicon.png">
+
+</head>
+
+<body>
+    <div id="tagline">
+        WHERE FURS AND PURRS MEET PERFECT CARE
+    </div>
+
+    <div id="header">
+        <section id="logo">
+            <img src="static/images/sqwbg.png" alt="purrfect care logo" height="100%">
+        </section>
+        <section id="buttonss">
+            <button title="Your Account"> <!--account-->
+                <img src="static/images/after-login-button.png" alt="Your Account" height="25px" width="auto">
+            </button>
+            <div id="numbering">
+            <button title="Shoping cart"> <!--cart-->
+                <img src="static/images/cart.png" alt="shop our product" height="25px" width="auto">
+            </button><sup id="click-count">0</sup></div>
+            <button title="Logout" onclick="window.location.href='index.html'"> <!--logout-->
+                <img src="static/images/logout.png" alt="favorites" height="25px" width="auto">
+            </button>
+        </section>
+        <section>
+            <button id="abtbutton" onclick="window.location.href='main-after-login.html'">
+
+                About us
+            </button>
+        </section>
+    </div>
+
+    <div id="dropdowns"  class="dd">
+
+        <button onclick="window.location.href='van.html'">van services</button>
+        <button onclick="window.location.href='med.html'">medicines</button>
+        <button onclick="window.location.href='smartcollar.html'"><sub>✧</sub>smart pet collar <sup>✧</sup></button>
+        <button onclick="window.location.href='onlinevet.html'">online vet consultation</button>
+        <button onclick="window.location.href='toys.html'">essentials</button>
+    </div>
+
+    <div id="van">
+        <p id="stt">Avail van services for grooming and health checkups at your doorstep</p>
+        <br><br><br>
+
+        <div class="mvan">
+            <div id="para-van">
+                <h2 id="head-van">MEDICAL VAN</h2>
+                Our Medical Van Service brings veterinary care directly to your home, offering routine check-ups,
+                vaccinations, and emergency care. With experienced vets and advanced equipment, we ensure your pet
+                receives the best medical attention without the hassle of travel.
+                <br><br>
+                <button id="bookbutton"> book now </button>
+
+            </div>
+            <img src="static/images/mv1.jpg" alt="" width="400px" height="auto">
+        </div>
+        <br><br><br>
+        <div>
+
+
+        </div>
+        <div class="mfeatures">
+            <div>
+                <img src="static/images/mvan1.png" alt="" height="100px" width="auto">
+                <p>5 min reaction time in emergency</p>
+            </div>
+            <div>
+                <img src="static/images/mvan2.png" alt="" height="100px" width="auto">
+                <p>comfortable and safe interior</p>
+            </div>
+            <div>
+                <img src="static/images/mvan3.png" alt="" height="100px" width="auto">
+                <p>hygienic and fully equipped</p>
+            </div>
+            <div>
+                <img src="static/images/mvan4.png" alt="" height="100px" width="auto">
+                <p>emergency and first aid kit</p>
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <div class="gvan">
+            <img src="static/images/gv1.jpg" alt="" width="400px" height="auto">
+            <div id="para-van">
+                <h2 id="head-van">GROOMING VAN</h2>
+                Our Grooming Van Service offers professional pet grooming at your doorstep, ensuring a stress-free
+                experience for your furry friend. From bathing and hair trimming to nail clipping, our experts provide
+                top-quality care in a fully equipped mobile salon.
+                <br><br>
+                <button id="bookbutton"> book now </button>
+            </div>
+        </div>
+        <br><br><br><br><br>
+        <div>
+
+        </div>
+        <div class="gfeatures">
+            <div>
+                <img src="static/images/gvan1.png" alt="" height="100px" width="auto">
+                <p>fully equipped vans</p>
+            </div>
+            <div>
+                <img src="static/images/gvan2.png" alt="" height="100px" width="auto">
+                <p>temperature control & ventillation facilities</p>
+            </div>
+            <div>
+                <img src="static/images/gvan3.png" alt="" height="100px" width="auto">
+                <p>safe & hygienic</p>
+            </div>
+            <div>
+                <img src="static/images/gvan4.png" alt="" height="100px" width="auto">
+                <p>water & power supply</p>
+            </div>
+        </div>
+        <br><br><br>
+
+    </div>
+    <section id="contact">
+        <p>
+            <b>Further information</b>
+            <hr width="15%">
+        </p>
+        <p id="info">
+            <br>
+
+            <a href="">Terms & Conditions </a><br>
+            <a href="">Code of Conduct </a><br><br>
+            Contact Us <br>
+            YASH BANSAL (CEO) <br>
+            +91 88002 25447
+        </p>
+
+
+    </section>
+
+
+
+    
+
+
+
+
+    <!--CODE FOR ADD TO CART NUMBERING-->
+
+    <script>
+        // Initialize count from localStorage or 0
+        let count = parseInt(localStorage.getItem('clickCount')) || 0;
+    
+        // Display count on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('click-count').innerHTML = count;
+    
+            // Attach event listeners to all add-to-cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    count++;
+                    localStorage.setItem('clickCount', count);
+                    document.getElementById('click-count').innerHTML = count;
+                });
+            });
+        });
+    </script>
+    
+
+
+
+
+
+</body>
+
+</html>

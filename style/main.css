@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding-top: 130px;
+    font-family: Arial, sans-serif;
+}
+
+#tagline {
+    position: fixed;
+    font-family: "Patrick Hand";
+    text-align: center;
+    background-color: white;
+    color: black;
+    top: 100px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 20px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    border-bottom: 1px solid #ddd;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    top: 0;
+    padding: 0 20px;
+    z-index: 999;
+}
+
+#logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo img {
+    height: 100px;
+}
+
+#buttonss {
+    position: absolute;
+    right: 80px;
+    display: flex;
+    gap: 20px;
+}
+
+#buttonss button {
+    all: unset;
+    cursor: pointer;
+}
+
+#buttonss button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+#abtbutton {
+    position: absolute;
+    left: 30px;
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    padding: 5px 10px;
+    font-family: quicksand;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#abtbutton:hover {
+    color: #e18aaa;
+}
+
+#dropdowns {
+    position: fixed;
+    top: 100px;
+    background-color: white;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    font-family: "Shadows Into Light Two" !important;
+    font-size: 15px;
+    height: 5%;
+    z-index: 1001;
+    border-bottom: 1px solid #ddd;
+}
+
+#dropdowns button {
+    all: unset;
+    cursor: pointer;
+    font-family: "quicksand" !important;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: black;
+}
+
+#dropdowns button:hover {
+    color: #e18aaa;
+}
+
+@keyframes sparkle {
+    0% {
+      text-shadow: 
+        0 0 4px #ffb6c1, 
+        0 0 8px #ff69b4, 
+        0 0 12px #ff1493;
+    }
+    50% {
+      text-shadow: 
+        0 0 10px #ffb6c1, 
+        0 0 20px #ff69b4, 
+        0 0 30px #ff1493;
+    }
+    100% {
+      text-shadow: 
+        0 0 4px #ffb6c1, 
+        0 0 8px #ff69b4, 
+        0 0 12px #ff1493;
+    }
+  }
+  
+
+.dd sub {
+    position: relative;
+    animation: sparkle 1.5s infinite alternate ease-in-out;
+    color: #ffa5d2;
+    font-size: 20px;
+}
+
+.dd sup {
+    position: relative;
+    animation: sparkle 1.5s infinite alternate ease-in-out;
+    color: #ffa5d2;
+    font-size: 20px;
+}
+
+
+#click-count{
+    font-family: Quicksand !important;
+    font-weight: bold !important;
+}
+
+
+#numbering{
+    display:flex;
+    gap:0px;
+}
+
+
+#content {
+    padding: 0;
+    text-align: center;
+    font-family: "Quicksand";
+}
+
+#mainprodimg {
+    width: 100%;
+    overflow: hidden;
+}
+
+#mainprodimg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#content section {
+    margin-bottom: 20px;
+}
+
+#heading {
+    font-family: "Bodoni Moda";
+    font-size: 70px;
+}
+
+#aboutus {
+    padding-left: 150px;
+    padding-right: 150px;
+    text-align: center;
+}
+
+#contact {
+    font-size: 15px !important;
+    text-align: left !important;
+    padding-left: 150px !important;
+}
+
+#contact a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+#contact a:hover {
+    text-decoration: underline !important;
+}
+
+#info {
+    font-size: 13px !important;
+}
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-family: "Amatic SC";
+}
+
+.popup h2 {
+    font-size: 40px;
+}
+
+.popup p {
+    font-size: 15px;
+    font-family: quicksand;
+}
+
+#loginbutton {
+    background-color: #e4a0b7;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-family: "Quicksand";
+}
+
+#loginbutton:hover {
+    background-color: #e18aaa;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #555;
+}

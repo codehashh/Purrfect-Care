@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Purrfect Care</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="icon" href="static/images/favicon.png">
+    <link rel="stylesheet" href="style/maincont.css">
+
+
+</head>
+
+<body>
+
+    <div id="tagline">
+        WHERE FURS AND PURRS MEET PERFECT CARE
+    </div>
+
+    <div id="header">
+        <section id="logo">
+            <img src="static/images/sqwbg.png" alt="purrfect care logo" height="100%">
+        </section>
+        <section id="buttonss">
+            <button title="Your Account"> <!--account-->
+                <img src="static/images/after-login-button.png" alt="Your Account" height="25px" width="auto">
+            </button>
+            <div id="numbering">
+            <button title="Shoping cart"> <!--cart-->
+                <img src="static/images/cart.png" alt="shop our product" height="25px" width="auto">
+            </button><sup id="click-count">0</sup></div>
+            <button title="Logout" onclick="window.location.href='index.html'"> <!--logout-->
+                <img src="static/images/logout.png" alt="favorites" height="25px" width="auto">
+            </button>
+        </section>
+    </div>
+
+    <div id="dropdowns"  class="dd">
+
+        <button onclick="window.location.href='van.html'">van services</button>
+        <button onclick="window.location.href='med.html'">medicines</button>
+        <button onclick="window.location.href='smartcollar.html'"><sub>✧</sub>smart pet collar <sup>✧</sup></button>
+        <button onclick="window.location.href='onlinevet.html'">online vet consultation</button>
+        <button onclick="window.location.href='toys.html'">essentials</button>
+    </div>
+
+    <div id="content">
+        <section id="mainprodimg">
+            <div class="one">
+                <img src="static/images/mainimg1.png" alt="">
+                <img src="static/images/mainimg2.png" alt="">
+            </div>
+            <div class="two">
+                <img src="static/images/mainimg3.png" alt="">
+                <img src="static/images/mainimg.png" alt="">
+            </div>
+        </section>
+        <br><br>
+        <section id="ques">
+            <h1>Ever Wonder What Your Pet is Feeling or When They Need Help?</h1>
+            Our AI-powered smart collar uses advanced neuro-signal tracking to decode your pet’s emotions and health in
+            real time. By detecting stress, pain, and abnormalities, it provides instant insights into their well-being.
+            Stay connected through our intuitive mobile app, receive timely alerts, and ensure your furry companion gets
+            the care they need—when they need it.
+        </section>
+        <br><br><br>
+        <section class="spc">
+            <section>
+                <div class="SPCfeatures">
+                    <div>
+                        <img src="static/images/SPCf1.png" alt="" height="100px" width="auto">
+                        <p>3 days battery life</p>
+                    </div>
+                    <div>
+                        <img src="static/images/SPCf2.png" alt="" height="100px" width="auto">
+                        <p>anti allergic, sweat free</p>
+                    </div>
+                    <div>
+                        <img src="static/images/SPCf3.png" alt="" height="100px" width="auto">
+                        <p>app connectivity</p>
+                    </div>
+                    <div>
+                        <img src="static/images/SPCf4.png" alt="" height="100px" width="auto">
+                        <p>non-toxic material used</p>
+                    </div>
+                </div>
+            </section>
+
+            <br><br><br>
+            <section class="whySPC">
+
+                <div>
+                    <!--images -->
+
+                    <div class="slider">
+                        <div class="slides">
+                            <img src="static/images/c1.png" alt="Image 1">
+                            <img src="static/images/c2.png" alt="Image 2">
+                            <img src="static/images/c3.png" alt="Image 3">
+                            <img src="static/images/c4.png" alt="Image 4">
+                            <img src="static/images/c5.png" alt="Image 5">
+                        </div>
+                    </div>
+
+
+                    <script>
+                        let index = 0;
+                        const slides = document.querySelector('.slides');
+                        const images = document.querySelectorAll('.slides img');
+                        const totalSlides = images.length;
+
+                        function changeSlide() {
+                            index = (index + 1) % totalSlides;
+                            slides.style.transform = `translateX(${-index * 650}px)`;
+                        }
+
+                        setInterval(changeSlide, 3000);
+
+                    </script>
+
+                </div>
+
+            </section>
+            <button onclick="window.location.href='smartcollar.html'" id="buybutton">buy smart pet collar now</button>
+        </section>
+        <br><br><br>
+        <div class="van">
+            <img src="static/images/gv1.jpg" alt="" width="400px" height="auto">
+            <div id="sttone">
+                <h2>AVAIL OUR VAN SERVICES</h2>
+                <br>
+                Top-notch grooming services, including bathing, trimming, and nail clipping, to keep your pets clean and
+                healthy. Additionally, our medical van services provide doorstep veterinary care, vaccinations, and
+                emergency assistance, ensuring your pet's well-being with convenience and expert care.
+                <br><br>
+                <button onclick="window.location.href='van.html'" id="buybutton">
+                    book now
+                </button>
+
+            </div>
+        </div>
+        <br><br><br>
+        <div class="van">
+            <div id="sttone">
+                <h2>CONSULT SPECIALISED VETS ONLINE</h2>
+                <br>
+                Our online vet consultation services connect you with experienced veterinarians for expert advice on pet
+                health, nutrition, and behavior. Get real-time guidance from the comfort of your home, ensuring your pet
+                receives the best care anytime, anywhere.
+                <br><br>
+                <button onclick="window.location.href='onlinevet.html'" id="buybutton">
+                    book now
+                </button>
+            </div>
+            <img src="static/images/fd2.jpg" alt="" width="400px" height="auto">
+        </div>
+        <br><br><br>
+
+        <div>
+            <h3 id="shop-head">SHOP ALL</h3>
+            <div class="shopall">
+                <button id="shopbutton" onclick="window.location.href='med.html'">
+                    MEDICINES
+                </button>
+                <button id="shopbutton" onclick="window.location.href='toys.html'">
+                    PET ESSENTIALS
+                </button>
+            </div>
+            <div class="category pet-category" data-pet="dog">
+                <button class="arrow left" onclick="scrollImages('dog', -200)">&#10094;</button>
+                <div class="image-container" id="dog">
+                    <div class="item">
+                        <img src="static/images/birdmed1.webp" alt="Dog Medicine">
+                        <p> <sup>₹</sup>350</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catmed2.webp" alt="Dog Shampoo">
+                        <p> <sup>₹</sup>250</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catt2.webp" alt="Dog Toy">
+                        <p> <sup>₹</sup>150</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogfb3.webp" alt="Dog Collar">
+                        <p> <sup>₹</sup>500</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogmed1.webp" alt="Dog Food">
+                        <p> <sup>₹</sup>700</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/fishmed2.webp" alt="">
+                        <p> <sup>₹</sup>300</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/dogfb3.webp" alt="">
+                        <p> <sup>₹</sup>500</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catsp3.webp" alt="">
+                        <p> <sup>₹</sup>400</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <div class="item">
+                        <img src="static/images/catt3.webp" alt="">
+                        <p> <sup>₹</sup>200</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <button class="arrow right" onclick="scrollImages('dog', 200)">&#10095;</button>
+
+                <script>
+                    function scrollImages(petType, scrollAmount) {
+                        const container = document.getElementById(petType);
+                        if (container) {
+                            container.scrollLeft += scrollAmount;
+                        }
+                    }
+
+                </script>
+            </div>
+
+        </div>
+        <br><br><br>
+        <section>
+            <video src="static/images/animvid.mp4" autoplay muted controls width="100%" height="auto">
+            </video>
+        </section>
+        <br>
+        <section>
+            <p id="heading">ABOUT US</p>
+            <p id="aboutus">
+                At Purrfect Care, we believe that every pet deserves the best because they're not just animals, they're
+                family. That's why we've created a one-stop solution for all your pet's needs, combining cutting-edge
+                technology with compassionate care. Our smart collars ensure your pet friend's health and safety,
+                tracking vital stats in real time. We don't just care - we redefine pet wellness, because your pet
+                deserves nothing less than purrfection.
+            </p>
+            <br><br><br><br><br>
+        </section>
+        <section id="contact">
+            <p>
+                <b>Further information</b>
+                <hr width="15%">
+            </p>
+            <p id="info">
+                <br>
+
+                <a href="">Terms & Conditions </a><br>
+                <a href="">Code of Conduct </a><br><br>
+                Contact Us <br>
+                YASH BANSAL (CEO) <br>
+                +91 88002 25447
+            </p>
+
+
+        </section>
+    </div>
+
+
+    
+
+
+
+
+    <!--CODE FOR ADD TO CART NUMBERING-->
+
+    <script>
+        // Initialize count from localStorage or 0
+        let count = parseInt(localStorage.getItem('clickCount')) || 0;
+    
+        // Display count on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('click-count').innerHTML = count;
+    
+            // Attach event listeners to all add-to-cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', () => {
+                    count++;
+                    localStorage.setItem('clickCount', count);
+                    document.getElementById('click-count').innerHTML = count;
+                });
+            });
+        });
+    </script>
+    
+
+
+
+
+
+
+</body>
+
+</html>
